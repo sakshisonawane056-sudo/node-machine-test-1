@@ -23,7 +23,7 @@ let blogs = [
 //fetch all blogs
 function getBlogs(req, res){
     try{
-        res.status(200).json({
+        res.status(200).json({  
             success : true,
             data : blogs,
             message : "fetch blogs successfully !!"
@@ -109,7 +109,7 @@ function deleteBlog(req, res){
                 message:"blog not found !!!"
             });
         }
-        let deletedBlog = blogs.slice(index, 1);
+        let deletedBlog = blogs.splice(index, 1);
         res.status(200).json({
             success : true,
             message : `blog with id : ${id} is deleted successfully !!`,
